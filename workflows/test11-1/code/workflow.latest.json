@@ -1,12 +1,49 @@
 {
+  "resolvers" : [ ],
   "graph" : {
+    "metainfo" : {
+      "cluster" : "local",
+      "id" : "test111",
+      "memory" : 1,
+      "mode" : "batch",
+      "processors" : 1,
+      "language" : "scala",
+      "imported" : true,
+      "interimMode" : "full",
+      "codeMode" : "sparse",
+      "buildSystem" : "maven"
+    },
+    "connections" : [ {
+      "metadata" : {
+        "route" : "e_S1vSJUqlF"
+      },
+      "src" : {
+        "port" : "out",
+        "process" : "Source0"
+      },
+      "tgt" : {
+        "port" : "in",
+        "process" : "Reformat0"
+      }
+    }, {
+      "metadata" : {
+        "route" : "e_HJkIJ8qlK"
+      },
+      "src" : {
+        "port" : "out",
+        "process" : "Reformat0"
+      },
+      "tgt" : {
+        "port" : "in",
+        "process" : "Filter0"
+      }
+    } ],
+    "groups" : [ ],
+    "inports" : { },
+    "outports" : { },
     "processes" : {
       "Source0" : {
         "component" : "Source",
-        "properties" : {
-          "interim" : false,
-          "cache" : false
-        },
         "metadata" : {
           "label" : "Source0",
           "x" : 216,
@@ -16,15 +53,15 @@
           "inputs" : [ ],
           "outputs" : [ "out" ]
         },
-        "lineage" : ""
+        "properties" : {
+          "interim" : false,
+          "cache" : false,
+          "id" : "17",
+          "version" : 0
+        }
       },
       "Reformat0" : {
         "component" : "Reformat",
-        "properties" : {
-          "interim" : true,
-          "cache" : false,
-          "functions" : [ ]
-        },
         "metadata" : {
           "label" : "Reformat0",
           "x" : 327,
@@ -34,14 +71,32 @@
           "inputs" : [ "in" ],
           "outputs" : [ "out" ]
         },
-        "lineage" : ""
+        "properties" : {
+          "interim" : true,
+          "cache" : false,
+          "functions" : [ {
+            "inputArgs" : [ {
+              "type" : "sql",
+              "expr" : "k1"
+            } ],
+            "addReplaceColumn" : "k1"
+          }, {
+            "inputArgs" : [ {
+              "type" : "sql",
+              "expr" : "order_id"
+            } ],
+            "addReplaceColumn" : "order_id"
+          }, {
+            "inputArgs" : [ {
+              "type" : "sql",
+              "expr" : "kajari"
+            } ],
+            "addReplaceColumn" : "kajari"
+          } ]
+        }
       },
       "Filter0" : {
         "component" : "Filter",
-        "properties" : {
-          "interim" : false,
-          "cache" : false
-        },
         "metadata" : {
           "label" : "Filter0",
           "x" : 509,
@@ -51,55 +106,11 @@
           "inputs" : [ "in" ],
           "outputs" : [ "out" ]
         },
-        "lineage" : ""
+        "properties" : {
+          "interim" : false,
+          "cache" : false
+        }
       }
-    },
-    "connections" : [ {
-      "src" : {
-        "process" : "Source0",
-        "port" : "out"
-      },
-      "tgt" : {
-        "process" : "Reformat0",
-        "port" : "in"
-      },
-      "metadata" : {
-        "route" : "e_S1vSJUqlF"
-      },
-      "lineage" : ""
-    }, {
-      "src" : {
-        "process" : "Reformat0",
-        "port" : "out"
-      },
-      "tgt" : {
-        "process" : "Filter0",
-        "port" : "in"
-      },
-      "metadata" : {
-        "route" : "e_HJkIJ8qlK"
-      },
-      "lineage" : ""
-    } ],
-    "groups" : [ ],
-    "locked" : false,
-    "metainfo" : {
-      "lastUpdated" : 1629278025591,
-      "id" : "test111",
-      "memory" : 1,
-      "imported" : true,
-      "language" : "scala",
-      "processors" : 1,
-      "cluster" : "local",
-      "mode" : "batch",
-      "interimMode" : "full",
-      "udfs" : null,
-      "codeMode" : "sparse",
-      "buildSystem" : "maven",
-      "udafs" : null,
-      "sparkOptions" : null
-    },
-    "inports" : { },
-    "outports" : { }
+    }
   }
 }

@@ -55,7 +55,9 @@
         },
         "properties" : {
           "interim" : false,
-          "cache" : false
+          "cache" : false,
+          "id" : "17",
+          "version" : 0
         }
       },
       "Reformat0" : {
@@ -72,7 +74,25 @@
         "properties" : {
           "interim" : true,
           "cache" : false,
-          "functions" : [ ]
+          "functions" : [ {
+            "inputArgs" : [ {
+              "type" : "sql",
+              "expr" : "k1"
+            } ],
+            "addReplaceColumn" : "k1"
+          }, {
+            "inputArgs" : [ {
+              "type" : "sql",
+              "expr" : "order_id"
+            } ],
+            "addReplaceColumn" : "order_id"
+          }, {
+            "inputArgs" : [ {
+              "type" : "sql",
+              "expr" : "kajari"
+            } ],
+            "addReplaceColumn" : "kajari"
+          } ]
         }
       },
       "Filter0" : {
