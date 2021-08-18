@@ -1,3 +1,0 @@
-# MultiForkExternalDemoTime__internal
-
-MultiForkExternalDemoTime__internal repository
