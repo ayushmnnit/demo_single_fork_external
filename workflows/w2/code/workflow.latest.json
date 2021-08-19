@@ -1,12 +1,70 @@
 {
   "graph" : {
-    "processes" : { },
+    "processes" : {
+      "Script0" : {
+        "component" : "Script",
+        "properties" : {
+          "interim" : false,
+          "cache" : false,
+          "code" : "",
+          "lastSchemaUpdate" : ""
+        },
+        "metadata" : {
+          "label" : "Script0",
+          "x" : 170,
+          "y" : 50
+        },
+        "ports" : {
+          "inputs" : [ ],
+          "outputs" : [ ]
+        },
+        "lineage" : ""
+      },
+      "Script1" : {
+        "component" : "Script",
+        "properties" : {
+          "interim" : false,
+          "cache" : false,
+          "code" : "",
+          "lastSchemaUpdate" : ""
+        },
+        "metadata" : {
+          "label" : "Script1",
+          "x" : 290,
+          "y" : 50
+        },
+        "ports" : {
+          "inputs" : [ ],
+          "outputs" : [ ]
+        },
+        "lineage" : ""
+      },
+      "Script2" : {
+        "component" : "Script",
+        "properties" : {
+          "interim" : false,
+          "cache" : false,
+          "code" : "",
+          "lastSchemaUpdate" : ""
+        },
+        "metadata" : {
+          "label" : "Script2",
+          "x" : 410,
+          "y" : 50
+        },
+        "ports" : {
+          "inputs" : [ ],
+          "outputs" : [ ]
+        },
+        "lineage" : ""
+      }
+    },
     "connections" : [ ],
     "groups" : [ ],
     "locked" : false,
     "metainfo" : {
-      "lastUpdated" : 1629377273133,
-      "id" : "w_2",
+      "lastUpdated" : 1629377378550,
+      "id" : "w2",
       "memory" : 1,
       "imported" : true,
       "language" : "scala",
