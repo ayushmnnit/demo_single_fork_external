@@ -1,0 +1,22 @@
+{
+  "resolvers" : [ ],
+  "graph" : {
+    "metainfo" : {
+      "cluster" : "local",
+      "id" : "w_2",
+      "memory" : 1,
+      "mode" : "batch",
+      "processors" : 1,
+      "language" : "scala",
+      "imported" : true,
+      "interimMode" : "full",
+      "codeMode" : "sparse",
+      "buildSystem" : "maven"
+    },
+    "connections" : [ ],
+    "groups" : [ ],
+    "inports" : { },
+    "outports" : { },
+    "processes" : { }
+  }
+}
