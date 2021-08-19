@@ -1,0 +1,3 @@
+# MultiExternalTestHope__internal
+
+MultiExternalTestHope__internal repository
