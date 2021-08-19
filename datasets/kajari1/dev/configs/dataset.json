@@ -1,0 +1,35 @@
+{
+  "datasetId" : "17",
+  "schema" : {
+    "fields" : [ {
+      "name" : "k1",
+      "nullable" : false,
+      "type" : "string"
+    }, {
+      "name" : "order_id",
+      "nullable" : false,
+      "type" : "string"
+    }, {
+      "name" : "kajari",
+      "nullable" : false,
+      "type" : "string"
+    } ],
+    "type" : "struct"
+  },
+  "datasetMode" : "batch",
+  "datasetType" : "File",
+  "description" : "asd",
+  "commonProperties" : {
+    "properties" : {
+      "location" : "http://kajari"
+    }
+  },
+  "dataFormat" : "csv",
+  "inputProperties" : {
+    "properties" : {
+      "sep" : ",",
+      "header" : true,
+      "inferSchema" : true
+    }
+  }
+}
