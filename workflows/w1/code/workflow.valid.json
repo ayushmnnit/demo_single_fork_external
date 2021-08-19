@@ -1,0 +1,59 @@
+{
+  "resolvers" : [ ],
+  "graph" : {
+    "metainfo" : {
+      "cluster" : "local",
+      "id" : "w1",
+      "memory" : 1,
+      "mode" : "batch",
+      "processors" : 1,
+      "language" : "scala",
+      "imported" : true,
+      "interimMode" : "full",
+      "codeMode" : "sparse",
+      "buildSystem" : "maven"
+    },
+    "connections" : [ ],
+    "groups" : [ ],
+    "inports" : { },
+    "outports" : { },
+    "processes" : {
+      "Script0" : {
+        "component" : "Script",
+        "metadata" : {
+          "label" : "Script0",
+          "x" : 170,
+          "y" : 50
+        },
+        "ports" : {
+          "inputs" : [ ],
+          "outputs" : [ ]
+        },
+        "properties" : {
+          "interim" : false,
+          "cache" : false,
+          "code" : "",
+          "lastSchemaUpdate" : ""
+        }
+      },
+      "Script1" : {
+        "component" : "Script",
+        "metadata" : {
+          "label" : "Script1",
+          "x" : 290,
+          "y" : 50
+        },
+        "ports" : {
+          "inputs" : [ ],
+          "outputs" : [ ]
+        },
+        "properties" : {
+          "interim" : false,
+          "cache" : false,
+          "code" : "",
+          "lastSchemaUpdate" : ""
+        }
+      }
+    }
+  }
+}
